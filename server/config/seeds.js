@@ -184,7 +184,7 @@ db.once('open', async () => {
       name: 'Black Panther Suit',
       category: categories[5]._id,
       description:
-        "",
+        "Worn by the King and protector of Wakanda, this special vibranium-weave suit is as durable as it is striking",
       image: '',
       price: 25000.00,
       quantity: 100
@@ -193,7 +193,7 @@ db.once('open', async () => {
       name: 'Vibranium Cube',
       category: categories[5]._id,
       description:
-        "",
+        "This is a cube of vibranium, the rarest and strongest material on Earth. It originally came to Earth on a meteorite that landed in Wakanda",
       image: '',
       price: 50000.00,
       quantity: 1000
@@ -202,7 +202,7 @@ db.once('open', async () => {
       name: "Shuri's Remote Driving System",
       category: categories[5]._id,
       description:
-        "",
+        "A next-generation remote driving system from Shuri's lab, this allows one to operate a vehicle without actually being in the vehicle",
       image: '',
       price: 100000.00,
       quantity: 100
@@ -211,7 +211,7 @@ db.once('open', async () => {
       name: 'Tour of Wakanda Vibranium Mine',
       category: categories[5]._id,
       description:
-        "",
+        "Take a tour of the biggest deposit and mining operation of vibranium on the planet",
       image: '',
       price: 5000.00,
       quantity: 1000
@@ -221,7 +221,7 @@ db.once('open', async () => {
       category: categories[5]._id,
       description:
         "Healing powers",
-      image: '',
+      image: 'A native plant of Wakanda, this herb is rumored to give the consumer special powers and access to the ancestral plane',
       price: 20000.00,
       quantity: 1000
     },
