@@ -103,7 +103,7 @@ db.once('open', async () => {
       name: 'Vial of Super Soldier Serum',
       category: categories[2]._id,
       description:
-        "",
+        "The stuff that turned Steve Rogers into Captain America as we know him, this serum is a one of a kind formulation and in very limited supply",
       image: '',
       price: 500000.00,
       quantity: 25
