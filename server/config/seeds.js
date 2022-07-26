@@ -112,7 +112,7 @@ db.once('open', async () => {
       name: 'Time Stone',
       category: categories[3]._id,
       description:
-        "",
+        "One of the six Infinity Stones, this stone predates the universe and represents time",
       image: '',
       price: 250000.00,
       quantity: 50
@@ -121,7 +121,7 @@ db.once('open', async () => {
       name: 'Soul Stone',
       category: categories[3]._id,
       description:
-        "",
+        "One of the six Infinity Stones, this stone represents the element of soul",
       image: '',
       price: 250000.00,
       quantity: 50
@@ -130,7 +130,7 @@ db.once('open', async () => {
       name: 'Reality Stone',
       category: categories[3]._id,
       description:
-        "",
+        "One of the six Infinity Stones, the Reality Stone is liquified into a dark red liquid called the Aether, and represents the element of reality",
       image: '',
       price: 250000.00,
       quantity: 50
@@ -139,7 +139,7 @@ db.once('open', async () => {
       name: 'Mind Stone',
       category: categories[3]._id,
       description:
-        "",
+        "One of the six Infinity Stones, this Mind Stone represents the element of the mind",
       image: '',
       price: 250000.00,
       quantity: 50
