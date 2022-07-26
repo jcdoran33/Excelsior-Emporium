@@ -148,7 +148,7 @@ db.once('open', async () => {
       name: 'Space Stone',
       category: categories[3]._id,
       description:
-        "",
+        "One of the six Infinity Stones, the Space Stone is housed in the Tesseract and should be handled with caution",
       image: '',
       price: 250000.00,
       quantity: 50
@@ -157,7 +157,7 @@ db.once('open', async () => {
       name: 'Custom Spider Web',
       category: categories[4]._id,
       description:
-        "",
+        "Ruquest a custom, made-to-order decoration made with 100% authentic spider silk straight from your friendly neighborhood Spiderman",
       image: '',
       price: 2000.00,
       quantity: 1000
