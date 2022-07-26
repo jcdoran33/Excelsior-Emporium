@@ -166,7 +166,7 @@ db.once('open', async () => {
       name: "Green Goblin's Helmet",
       category: categories[4]._id,
       description:
-        "",
+        "One of Spiderman's most infamous adversaries, the Green Goblin has a distinctive outfit which includes this terrifying helmet",
       image: '',
       price: 20000.00,
       quantity: 100
@@ -175,7 +175,7 @@ db.once('open', async () => {
       name: 'Daily Prophet Subscription',
       category: categories[4]._id,
       description:
-        "",
+        "New York's premier newspaper, the Daily Prophet will keep you up to date on your favorite super hero's extracurricular activities",
       image: '',
       price: 50.00,
       quantity: 10000
