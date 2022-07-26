@@ -85,7 +85,7 @@ db.once('open', async () => {
       name: 'Shield',
       category: categories[2]._id,
       description:
-        "",
+        "Equally useful for offense and defense, this shield of Proto-Adamantium and Vibranium provides endless fun",
       image: '',
       price: 50000.00,
       quantity: 50
@@ -94,7 +94,7 @@ db.once('open', async () => {
       name: 'Suit',
       category: categories[2]._id,
       description:
-        "",
+        "A striking look for any occassion, this carbon polymer suit is resistant to damage and feature the classic red, white, and blue color scheme",
       image: '',
       price: 25000.00,
       quantity: 100
