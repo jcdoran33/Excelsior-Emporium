@@ -209,10 +209,10 @@ input:focus {
   }
 }
 
-/* custom classes */
+/* class for product image sizes */
 .product-image {
-max-width: 200px;
-max-height: 200px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .product-image-detail {
