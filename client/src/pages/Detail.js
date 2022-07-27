@@ -105,6 +105,7 @@ function Detail() {
           <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
+            className='product-image-detail'
           />
         </div>
       ) : null}
