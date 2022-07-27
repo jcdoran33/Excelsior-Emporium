@@ -226,7 +226,6 @@ db.once('open', async () => {
       quantity: 1000
     },
   ]);
-
   console.log('products seeded');
 
   await User.deleteMany();
@@ -238,7 +237,7 @@ db.once('open', async () => {
     password: 'pass1234',
     orders: [
       {
-        products: [products[0]._id, products[0]._id, products[1]._id]
+        products: [products[0]._id, products[1]._id]
       }
     ]
   });
@@ -250,7 +249,7 @@ db.once('open', async () => {
     password: 'pass1234',
     orders: [
       {
-        products: [products[0]._id, products[0]._id, products[1]._id]
+        products: [products[0]._id, products[15]._id]
       }
     ]
   });
@@ -262,7 +261,7 @@ db.once('open', async () => {
     password: 'pass1234',
     orders: [
       {
-        products: [products[0]._id, products[0]._id, products[1]._id]
+        products: [products[4]._id]
       }
     ]
   });
