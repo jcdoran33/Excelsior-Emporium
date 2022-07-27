@@ -42,10 +42,10 @@ function Nav() {
   return (
     <header className="flex-row px-1">
       <h1>
-        <Link to="/">
+          <a href="/">
           <span role="img" aria-label="shopping bag">🛍️</span>
           -Shop-Shop
-        </Link>
+          </a>
       </h1>
 
       <nav>
