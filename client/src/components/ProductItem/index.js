@@ -45,6 +45,7 @@ function ProductItem(item) {
         <img
           alt={name}
           src={`/images/${image}`}
+          className='product-image'
         />
         <p>{name}</p>
       </Link>

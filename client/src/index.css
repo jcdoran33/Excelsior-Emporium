@@ -208,3 +208,14 @@ input:focus {
     width: 100%;
   }
 }
+
+/* class for product image sizes */
+.product-image {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.product-image-detail {
+  max-width: 350px;
+  max-height: 350px;
+}
