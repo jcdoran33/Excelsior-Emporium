@@ -17,3 +17,7 @@
 .text {
     font-size: 85px;
 }
+
+header {
+    margin-bottom: 0px;
+}

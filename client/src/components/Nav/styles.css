@@ -1,0 +1,10 @@
+
+.in-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+nav {
+    background-color:antiquewhite;
+}
