@@ -85,7 +85,7 @@ db.once('open', async () => {
       name: 'Shield',
       category: categories[2]._id,
       description:
-        "",
+        "Equally useful for offense and defense, this shield of Proto-Adamantium and Vibranium provides endless fun",
       image: '',
       price: 50000.00,
       quantity: 50
@@ -94,7 +94,7 @@ db.once('open', async () => {
       name: 'Suit',
       category: categories[2]._id,
       description:
-        "",
+        "A striking look for any occassion, this carbon polymer suit is resistant to damage and feature the classic red, white, and blue color scheme",
       image: '',
       price: 25000.00,
       quantity: 100
@@ -103,7 +103,7 @@ db.once('open', async () => {
       name: 'Vial of Super Soldier Serum',
       category: categories[2]._id,
       description:
-        "",
+        "The stuff that turned Steve Rogers into Captain America as we know him, this serum is a one of a kind formulation and in very limited supply",
       image: '',
       price: 500000.00,
       quantity: 25
@@ -112,7 +112,7 @@ db.once('open', async () => {
       name: 'Time Stone',
       category: categories[3]._id,
       description:
-        "",
+        "One of the six Infinity Stones, this stone predates the universe and represents time",
       image: '',
       price: 250000.00,
       quantity: 50
@@ -121,7 +121,7 @@ db.once('open', async () => {
       name: 'Soul Stone',
       category: categories[3]._id,
       description:
-        "",
+        "One of the six Infinity Stones, this stone represents the element of soul",
       image: '',
       price: 250000.00,
       quantity: 50
@@ -130,7 +130,7 @@ db.once('open', async () => {
       name: 'Reality Stone',
       category: categories[3]._id,
       description:
-        "",
+        "One of the six Infinity Stones, the Reality Stone is liquified into a dark red liquid called the Aether, and represents the element of reality",
       image: '',
       price: 250000.00,
       quantity: 50
@@ -139,7 +139,7 @@ db.once('open', async () => {
       name: 'Mind Stone',
       category: categories[3]._id,
       description:
-        "",
+        "One of the six Infinity Stones, this Mind Stone represents the element of the mind",
       image: '',
       price: 250000.00,
       quantity: 50
@@ -148,7 +148,7 @@ db.once('open', async () => {
       name: 'Space Stone',
       category: categories[3]._id,
       description:
-        "",
+        "One of the six Infinity Stones, the Space Stone is housed in the Tesseract and should be handled with caution",
       image: '',
       price: 250000.00,
       quantity: 50
@@ -157,7 +157,7 @@ db.once('open', async () => {
       name: 'Custom Spider Web',
       category: categories[4]._id,
       description:
-        "",
+        "Ruquest a custom, made-to-order decoration made with 100% authentic spider silk straight from your friendly neighborhood Spiderman",
       image: '',
       price: 2000.00,
       quantity: 1000
@@ -166,7 +166,7 @@ db.once('open', async () => {
       name: "Green Goblin's Helmet",
       category: categories[4]._id,
       description:
-        "",
+        "One of Spiderman's most infamous adversaries, the Green Goblin has a distinctive outfit which includes this terrifying helmet",
       image: '',
       price: 20000.00,
       quantity: 100
@@ -175,7 +175,7 @@ db.once('open', async () => {
       name: 'Daily Prophet Subscription',
       category: categories[4]._id,
       description:
-        "",
+        "New York's premier newspaper, the Daily Prophet will keep you up to date on your favorite super hero's extracurricular activities",
       image: '',
       price: 50.00,
       quantity: 10000
@@ -184,7 +184,7 @@ db.once('open', async () => {
       name: 'Black Panther Suit',
       category: categories[5]._id,
       description:
-        "",
+        "Worn by the King and protector of Wakanda, this special vibranium-weave suit is as durable as it is striking",
       image: '',
       price: 25000.00,
       quantity: 100
@@ -193,7 +193,7 @@ db.once('open', async () => {
       name: 'Vibranium Cube',
       category: categories[5]._id,
       description:
-        "",
+        "This is a cube of vibranium, the rarest and strongest material on Earth. It originally came to Earth on a meteorite that landed in Wakanda",
       image: '',
       price: 50000.00,
       quantity: 1000
@@ -202,7 +202,7 @@ db.once('open', async () => {
       name: "Shuri's Remote Driving System",
       category: categories[5]._id,
       description:
-        "",
+        "A next-generation remote driving system from Shuri's lab, this allows one to operate a vehicle without actually being in the vehicle",
       image: '',
       price: 100000.00,
       quantity: 100
@@ -211,7 +211,7 @@ db.once('open', async () => {
       name: 'Tour of Wakanda Vibranium Mine',
       category: categories[5]._id,
       description:
-        "",
+        "Take a tour of the biggest deposit and mining operation of vibranium on the planet",
       image: '',
       price: 5000.00,
       quantity: 1000
@@ -220,7 +220,7 @@ db.once('open', async () => {
       name: 'The Heart Shaped Herb',
       category: categories[5]._id,
       description:
-        "Healing powers",
+        "A native plant of Wakanda, this herb is rumored to give the consumer special powers and access to the ancestral plane",
       image: '',
       price: 20000.00,
       quantity: 1000
