@@ -5,11 +5,12 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Thor' },
+    { name: 'Iron Man' },
+    { name: 'Captain America' },
+    { name: 'Thanos' },
+    { name: 'Spiderman' },
+    { name: 'Black Panther' }
   ]);
 
   console.log('categories seeded');
@@ -18,112 +19,212 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Mjolnir',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        "Thor's original hammer",
+      image: '',
       category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
+      price: 20000.00,
+      quantity: 10
     },
     {
-      name: 'Canned Coffee',
+      name: "Lightning Bolt",
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+        "Thor's newly stolen weapon of choice from Zues",
+      image: '',
       category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
+      price: 50000.00,
+      quantity: 5
     },
     {
-      name: 'Toilet Paper',
+      name: 'Stormbreaker',
+      category: categories[0]._id,
+      description:
+        "Thor's new axe",
+      image: '',
+      price: 10000.00,
+      quantity: 15
+    },
+    {
+      name: 'Ironman Suit',
       category: categories[1]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
+        "Mr.Stark's most technically sound version of his suit yet",
+      image: '',
+      price: 75000.00,
       quantity: 20
     },
     {
-      name: 'Handmade Soap',
+      name: 'Jarvis AI System',
       category: categories[1]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
+        "Iron Man's AI system",
+      image: '',
+      price: 100000.00,
+      quantity: 10
+    },
+    {
+      name: 'Physics Lesson with Mr. Stark',
+      category: categories[1]._id,
+      description:
+        "One on one physics lesson with the most brilliant man of his time",
+      image: '',
+      price: 50000.00,
       quantity: 50
     },
     {
-      name: 'Set of Wooden Spoons',
+      name: 'Stark Industries Gift Card',
       category: categories[1]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
+        "Gift card valued at $500 to use at the one and only Stark Industries Gift Shop",
+      image: '',
+      price: 500.00,
+      quantity: 1000
+    },
+    {
+      name: 'Shield',
+      category: categories[2]._id,
+      description:
+        "Equally useful for offense and defense, this shield of Proto-Adamantium and Vibranium provides endless fun",
+      image: '',
+      price: 50000.00,
+      quantity: 50
+    },
+    {
+      name: 'Suit',
+      category: categories[2]._id,
+      description:
+        "A striking look for any occassion, this carbon polymer suit is resistant to damage and feature the classic red, white, and blue color scheme",
+      image: '',
+      price: 25000.00,
       quantity: 100
     },
     {
-      name: 'Camera',
+      name: 'Vial of Super Soldier Serum',
       category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
-      quantity: 30
+        "The stuff that turned Steve Rogers into Captain America as we know him, this serum is a one of a kind formulation and in very limited supply",
+      image: '',
+      price: 500000.00,
+      quantity: 25
     },
     {
-      name: 'Tablet',
-      category: categories[2]._id,
-      description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
-      quantity: 30
-    },
-    {
-      name: 'Tales at Bedtime',
+      name: 'Time Stone',
       category: categories[3]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
-      quantity: 100
+        "One of the six Infinity Stones, this stone predates the universe and represents time",
+      image: '',
+      price: 250000.00,
+      quantity: 50
     },
     {
-      name: 'Spinning Top',
+      name: 'Soul Stone',
+      category: categories[3]._id,
+      description:
+        "One of the six Infinity Stones, this stone represents the element of soul",
+      image: '',
+      price: 250000.00,
+      quantity: 50
+    },
+    {
+      name: 'Reality Stone',
+      category: categories[3]._id,
+      description:
+        "One of the six Infinity Stones, the Reality Stone is liquified into a dark red liquid called the Aether, and represents the element of reality",
+      image: '',
+      price: 250000.00,
+      quantity: 50
+    },
+    {
+      name: 'Mind Stone',
+      category: categories[3]._id,
+      description:
+        "One of the six Infinity Stones, this Mind Stone represents the element of the mind",
+      image: '',
+      price: 250000.00,
+      quantity: 50
+    },
+    {
+      name: 'Space Stone',
+      category: categories[3]._id,
+      description:
+        "One of the six Infinity Stones, the Space Stone is housed in the Tesseract and should be handled with caution",
+      image: '',
+      price: 250000.00,
+      quantity: 50
+    },
+    {
+      name: 'Custom Spider Web',
       category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
+      description:
+        "Ruquest a custom, made-to-order decoration made with 100% authentic spider silk straight from your friendly neighborhood Spiderman",
+      image: '',
+      price: 2000.00,
       quantity: 1000
     },
     {
-      name: 'Set of Plastic Horses',
+      name: "Green Goblin's Helmet",
       category: categories[4]._id,
       description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
-    },
-    {
-      name: 'Teddy Bear',
-      category: categories[4]._id,
-      description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
+        "One of Spiderman's most infamous adversaries, the Green Goblin has a distinctive outfit which includes this terrifying helmet",
+      image: '',
+      price: 20000.00,
       quantity: 100
     },
     {
-      name: 'Alphabet Blocks',
+      name: 'Daily Bugle Subscription',
       category: categories[4]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600
-    }
+        "New York's premier newspaper, the Daily Bugle will keep you up to date on your favorite super hero's extracurricular activities",
+      image: '',
+      price: 50.00,
+      quantity: 10000
+    },
+    {
+      name: 'Black Panther Suit',
+      category: categories[5]._id,
+      description:
+        "Worn by the King and protector of Wakanda, this special vibranium-weave suit is as durable as it is striking",
+      image: '',
+      price: 25000.00,
+      quantity: 100
+    },
+    {
+      name: 'Vibranium Cube',
+      category: categories[5]._id,
+      description:
+        "This is a cube of vibranium, the rarest and strongest material on Earth. It originally came to Earth on a meteorite that landed in Wakanda",
+      image: '',
+      price: 50000.00,
+      quantity: 1000
+    },
+    {
+      name: "Shuri's Remote Driving System",
+      category: categories[5]._id,
+      description:
+        "A next-generation remote driving system from Shuri's lab, this allows one to operate a vehicle without actually being in the vehicle",
+      image: '',
+      price: 100000.00,
+      quantity: 100
+    },
+    {
+      name: 'Tour of Wakanda Vibranium Mine',
+      category: categories[5]._id,
+      description:
+        "Take a tour of the biggest deposit and mining operation of vibranium on the planet",
+      image: '',
+      price: 5000.00,
+      quantity: 1000
+    },
+    {
+      name: 'The Heart Shaped Herb',
+      category: categories[5]._id,
+      description:
+        "A native plant of Wakanda, this herb is rumored to give the consumer special powers and access to the ancestral plane",
+      image: '',
+      price: 20000.00,
+      quantity: 1000
+    },
   ]);
 
   console.log('products seeded');
@@ -131,10 +232,10 @@ db.once('open', async () => {
   await User.deleteMany();
 
   await User.create({
-    firstName: 'Pamela',
-    lastName: 'Washington',
-    email: 'pamela@testmail.com',
-    password: 'password12345',
+    firstName: 'Kishan',
+    lastName: 'Shah',
+    email: 'kishan@email.com',
+    password: 'pass1234',
     orders: [
       {
         products: [products[0]._id, products[0]._id, products[1]._id]
@@ -143,10 +244,27 @@ db.once('open', async () => {
   });
 
   await User.create({
-    firstName: 'Elijah',
-    lastName: 'Holt',
-    email: 'eholt@testmail.com',
-    password: 'password12345'
+    firstName: 'Jack',
+    lastName: 'Doran',
+    email: 'jack@email.com',
+    password: 'pass1234',
+    orders: [
+      {
+        products: [products[0]._id, products[0]._id, products[1]._id]
+      }
+    ]
+  });
+
+  await User.create({
+    firstName: 'Alyssa',
+    lastName: 'Lopez',
+    email: 'alyssa@email.com',
+    password: 'pass1234',
+    orders: [
+      {
+        products: [products[0]._id, products[0]._id, products[1]._id]
+      }
+    ]
   });
 
   console.log('users seeded');
