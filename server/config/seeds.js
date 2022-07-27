@@ -220,8 +220,8 @@ db.once('open', async () => {
       name: 'The Heart Shaped Herb',
       category: categories[5]._id,
       description:
-        "Healing powers",
-      image: 'A native plant of Wakanda, this herb is rumored to give the consumer special powers and access to the ancestral plane',
+        "A native plant of Wakanda, this herb is rumored to give the consumer special powers and access to the ancestral plane",
+      image: '',
       price: 20000.00,
       quantity: 1000
     },
