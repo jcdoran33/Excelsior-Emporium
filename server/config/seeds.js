@@ -172,10 +172,10 @@ db.once('open', async () => {
       quantity: 100
     },
     {
-      name: 'Daily Prophet Subscription',
+      name: 'Daily Bugle Subscription',
       category: categories[4]._id,
       description:
-        "New York's premier newspaper, the Daily Prophet will keep you up to date on your favorite super hero's extracurricular activities",
+        "New York's premier newspaper, the Daily Bugle will keep you up to date on your favorite super hero's extracurricular activities",
       image: '',
       price: 50.00,
       quantity: 10000
