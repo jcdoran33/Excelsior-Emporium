@@ -8,9 +8,9 @@ function Header() {
         <header className="background-img center">
 
                 <h1 className='back text'>
-                    <Link to="/">
+                    <a href='/'>
                         Excelsior Emporium
-                    </Link>
+                    </a>
                 </h1>
 
         </header>
