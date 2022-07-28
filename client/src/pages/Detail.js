@@ -111,6 +111,16 @@ function Detail() {
         <div className="container my-1">
           <Link to="/">← Back to Products</Link>
 
+
+          <div className='center-column'>
+            <img
+              src={`/images/${currentProduct.image}`}
+              alt={currentProduct.name}
+              className='product-image-detail'
+            />
+
+
+
           <h2>{currentProduct.name}</h2>
 
           <p>{currentProduct.description}</p>
