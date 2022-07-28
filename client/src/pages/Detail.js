@@ -90,7 +90,7 @@ function Detail() {
     const textData = textField.value;
     const length = reviewList.childElementCount;
 
-    // localStorage.setItem(`review${length+1}`, `${textData}`);
+    localStorage.setItem(`review-${currentProduct.name}-${length+1}`, `${textData}`); //saves new review in localStorage
 
     reviewList.innerHTML +=
      ` 
