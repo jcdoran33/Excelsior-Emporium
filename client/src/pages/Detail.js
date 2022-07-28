@@ -136,11 +136,11 @@ function Detail() {
             </button>
           </p>
 
-          <img
+          {/* <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
             className='product-image-detail'
-          />
+          /> */}
           <br/>
           <h3>Reviews</h3> <br/>
           <form>
