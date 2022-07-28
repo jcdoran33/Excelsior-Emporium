@@ -219,3 +219,12 @@ input:focus {
   max-width: 350px;
   max-height: 350px;
 }
+
+/* styling for review blocks */
+.review {
+  border: 2px solid lightgrey;
+  padding: 2px;
+  margin: 10px;
+  max-width: 75%;
+  min-width: 25%;
+}
