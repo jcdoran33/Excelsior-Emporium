@@ -277,6 +277,26 @@ db.once('open', async () => {
       user: users[0]._id,
       product: products[0]._id
     },
+    {
+      comment: "Love this product!!!",
+      user: users[0]._id,
+      product: products[1]._id
+    },
+    {
+      comment: "My son absolutely loves this product!",
+      user: users[1]._id,
+      product: products[0]._id
+    },
+    {
+      comment: "10/10, will be buying this again in the future",
+      user: users[1]._id,
+      product: products[15]._id
+    },
+    {
+      comment: "Wow this Jarvis guy is smart! He finished my coding assignment in 2 seconds",
+      user: users[2]._id,
+      product: products[4]._id
+    }
   ]);
 
   console.log('reviews seeded');
