@@ -132,9 +132,9 @@ function Detail() {
             className='product-image-detail'
           />
           <br/>
-          <h3>Reviews</h3>
+          <h3>Reviews</h3> <br/>
           <form>
-            <textarea required={true} cols="50" rows="5" id="review-area" placeholder='Add your review here'></textarea>
+            <textarea required={true} cols="40" rows="5" id="review-area" placeholder='Add your review here'></textarea>
             <br/>
             <button 
             onClick={postNewReview} 

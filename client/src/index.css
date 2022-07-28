@@ -223,8 +223,15 @@ input:focus {
 /* styling for review blocks */
 .review {
   border: 2px solid lightgrey;
-  padding: 2px;
+  padding: 4px;
   margin: 10px;
-  max-width: 75%;
-  min-width: 25%;
+  max-width: 85%;
+  min-width: 30%;
+}
+
+/*  review-area styling */
+
+#review-area {
+  max-width: 500px;
+  min-width: 200px;
 }
