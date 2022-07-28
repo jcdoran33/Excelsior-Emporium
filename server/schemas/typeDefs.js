@@ -30,6 +30,13 @@ const typeDefs = gql`
     orders: [Order]
   }
 
+  type Review {
+    _id: ID
+    comment: String
+    user: User
+    product: Product
+  }
+
   type Checkout {
     session: ID
   }

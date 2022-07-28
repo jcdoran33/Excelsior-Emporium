@@ -107,6 +107,7 @@ function Detail() {
             alt={currentProduct.name}
             className='product-image-detail'
           />
+          <textarea id="review-area" placeholder='Add your review here'></textarea>
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}
