@@ -82,6 +82,29 @@ function Detail() {
     idbPromise('cart', 'delete', { ...currentProduct });
   };
 
+  const postNewReview = (event) => {
+    event.preventDefault();
+
+    const textField = document.querySelector("#review-area");
+    const reviewList = document.querySelector(".review-container");
+    const textData = textField.value;
+    const length = reviewList.childElementCount;
+
+    // localStorage.setItem(`review${length+1}`, `${textData}`);
+
+    reviewList.innerHTML +=
+     ` 
+      <div class="review">
+          <h4>${currentProduct.name} Review #${length+1}</h4>
+          <p>${textData}</p>
+      </div>
+      `
+    ;
+
+    textField.value = '';
+
+  }
+
   return (
     <>
       {currentProduct && cart ? (
@@ -109,12 +132,27 @@ function Detail() {
             className='product-image-detail'
           />
           <br/>
-          <h3>Reviews</h3>
+          <h3>Reviews</h3> <br/>
           <form>
-            <textarea required={true} cols="50" rows="5" id="review-area" placeholder='Add your review here'></textarea>
+            <textarea required={true} cols="40" rows="5" id="review-area" placeholder='Add your review here'></textarea>
             <br/>
-            <button>Submit Review</button>
+            <button 
+            onClick={postNewReview} 
+            id="review-submit"
+            >Submit Review
+            </button>
           </form>
+
+          <div className="review-container">
+            <div className="review">
+              <h4>Review 1 Title</h4>
+              <p>Review 1 Test Content - Review 1 Test Content - Review 1 Test Content - </p>
+            </div>
+            <div className="review">
+              <h4>Review 2 Title</h4>
+              <p>Review 2 Test Content - Review 2 Test Content - Review 2 Test Content - </p>
+            </div>
+          </div>
 
         </div>
       ) : null}
