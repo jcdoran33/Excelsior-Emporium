@@ -9,6 +9,7 @@ import {
   UPDATE_CART_QUANTITY,
   ADD_TO_CART,
   UPDATE_PRODUCTS,
+  ADD_REVIEW
 } from '../utils/actions';
 import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
@@ -81,11 +82,35 @@ function Detail() {
     idbPromise('cart', 'delete', { ...currentProduct });
   };
 
+  const postNewReview = (event) => {
+    event.preventDefault();
+
+    const textField = document.querySelector("#review-area");
+    const reviewList = document.querySelector(".review-container");
+    const textData = textField.value;
+    const length = reviewList.childElementCount;
+
+    // localStorage.setItem(`review${length+1}`, `${textData}`);
+
+    reviewList.innerHTML +=
+     ` 
+      <div class="review">
+          <h4>${currentProduct.name} Review #${length+1}</h4>
+          <p>${textData}</p>
+      </div>
+      `
+    ;
+
+    textField.value = '';
+
+  }
+
   return (
     <>
       {currentProduct && cart ? (
         <div className="container my-1">
           <Link to="/">← Back to Products</Link>
+
 
           <div className='center-column'>
             <img
@@ -94,21 +119,51 @@ function Detail() {
               className='product-image-detail'
             />
 
-            <h2>{currentProduct.name}</h2>
 
-            <p>{currentProduct.description}</p>
 
-            <p>
-              <strong>Price:</strong>${currentProduct.price}{' '}
-              <button onClick={addToCart}>Add to Cart</button>
-              <button
-                disabled={!cart.find((p) => p._id === currentProduct._id)}
-                onClick={removeFromCart}
-              >
-                Remove from Cart
-              </button>
-            </p>
+          <h2>{currentProduct.name}</h2>
+
+          <p>{currentProduct.description}</p>
+
+          <p>
+            <strong>Price:</strong>${currentProduct.price}{' '}
+            <button onClick={addToCart}>Add to Cart</button>
+            <button
+              disabled={!cart.find((p) => p._id === currentProduct._id)}
+              onClick={removeFromCart}
+            >
+              Remove from Cart
+            </button>
+          </p>
+
+          <img
+            src={`/images/${currentProduct.image}`}
+            alt={currentProduct.name}
+            className='product-image-detail'
+          />
+          <br/>
+          <h3>Reviews</h3> <br/>
+          <form>
+            <textarea required={true} cols="40" rows="5" id="review-area" placeholder='Add your review here'></textarea>
+            <br/>
+            <button 
+            onClick={postNewReview} 
+            id="review-submit"
+            >Submit Review
+            </button>
+          </form>
+
+          <div className="review-container">
+            <div className="review">
+              <h4>Review 1 Title</h4>
+              <p>Review 1 Test Content - Review 1 Test Content - Review 1 Test Content - </p>
+            </div>
+            <div className="review">
+              <h4>Review 2 Title</h4>
+              <p>Review 2 Test Content - Review 2 Test Content - Review 2 Test Content - </p>
+            </div>
           </div>
+
         </div>
       ) : null}
       {loading ? <img src={spinner} alt="loading" /> : null}

@@ -255,6 +255,7 @@ nav {
   max-height: 350px;
 }
 
+
 /* details page */
 .center-column {
   display: flex;
@@ -287,4 +288,19 @@ nav {
 .bottom-border {
   padding:50px;
   border-bottom: black solid 2px;
+
+/* styling for review blocks */
+.review {
+  border: 2px solid lightgrey;
+  padding: 4px;
+  margin: 10px;
+  max-width: 85%;
+  min-width: 30%;
+}
+
+/*  review-area styling */
+
+#review-area {
+  max-width: 500px;
+  min-width: 200px;
 }

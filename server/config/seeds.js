@@ -1,5 +1,5 @@
 const db = require('./connection');
-const { User, Product, Category } = require('../models');
+const { User, Product, Category, Review } = require('../models');
 
 db.once('open', async () => {
   await Category.deleteMany();
@@ -230,43 +230,77 @@ db.once('open', async () => {
 
   await User.deleteMany();
 
-  await User.create({
-    firstName: 'Kishan',
-    lastName: 'Shah',
-    email: 'kishan@email.com',
-    password: 'pass1234',
-    orders: [
-      {
-        products: [products[0]._id, products[1]._id]
-      }
-    ]
-  });
-
-  await User.create({
-    firstName: 'Jack',
-    lastName: 'Doran',
-    email: 'jack@email.com',
-    password: 'pass1234',
-    orders: [
-      {
-        products: [products[0]._id, products[15]._id]
-      }
-    ]
-  });
-
-  await User.create({
-    firstName: 'Alyssa',
-    lastName: 'Lopez',
-    email: 'alyssa@email.com',
-    password: 'pass1234',
-    orders: [
-      {
-        products: [products[4]._id]
-      }
-    ]
-  });
+  const users = await User.create([
+    {
+      firstName: 'Kishan',
+      lastName: 'Shah',
+      email: 'kishan@email.com',
+      password: 'pass1234',
+      orders: [
+        {
+          products: [products[0]._id, products[1]._id]
+        }
+      ]
+    },
+    {
+      firstName: 'Jack',
+      lastName: 'Doran',
+      email: 'jack@email.com',
+      password: 'pass1234',
+      orders: [
+        {
+          products: [products[0]._id, products[15]._id]
+        }
+      ]
+    },
+    {
+      firstName: 'Alyssa',
+      lastName: 'Lopez',
+      email: 'alyssa@email.com',
+      password: 'pass1234',
+      orders: [
+        {
+          products: [products[4]._id]
+        }
+      ]
+    }
+  ]);
 
   console.log('users seeded');
+  console.log(users);
+
+  await Review.deleteMany();
+
+  const reviews = await Review.insertMany([
+    {
+      comment: "Great product! Would highly recommend",
+      user: users[0]._id,
+      product: products[0]._id
+    },
+    {
+      comment: "Love this product!!!",
+      user: users[0]._id,
+      product: products[1]._id
+    },
+    {
+      comment: "My son absolutely loves this product!",
+      user: users[1]._id,
+      product: products[0]._id
+    },
+    {
+      comment: "10/10, will be buying this again in the future",
+      user: users[1]._id,
+      product: products[15]._id
+    },
+    {
+      comment: "Wow this Jarvis guy is smart! He finished my coding assignment in 2 seconds",
+      user: users[2]._id,
+      product: products[4]._id
+    }
+  ]);
+
+  console.log('reviews seeded');
+  console.log(reviews);
 
   process.exit();
 });
