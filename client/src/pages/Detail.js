@@ -118,7 +118,7 @@ function Detail() {
               alt={currentProduct.name}
               className='product-image-detail'
             />
-
+          </div>
 
 
           <h2>{currentProduct.name}</h2>
