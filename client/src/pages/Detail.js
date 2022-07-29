@@ -105,13 +105,23 @@ function Detail() {
 
   }
  // cannot get below code working (supposed to fetch all the items in storage)
-  // let storedReviews = async function () {
-  //   const reviewList = document.querySelector(".review-container");
-  //   let i = 0;
-  //   for (i = 0; i < reviewList.childElementCount; i++){
-  //     await localstorage.getItem(`review-${currentProduct.name}-${i}`);
-  //   }
-  // };
+  let storedReviews = async function () {
+    const reviewList = document.querySelector(".review-container");
+    const reviewLength = reviewList.childElementCount;
+    let i = 0;
+    for (i = 0; i < 3; i++){
+      const oldReviews = await localStorage.getItem(`review-${currentProduct.name}-${i}`);
+      console.log(oldReviews);
+      reviewList.innerHTML += 
+      ` 
+      <div class="review">
+          <h4>${currentProduct.name} Review #${reviewLength+1}</h4>
+          <p>${oldReviews}</p>
+      </div>
+      `
+    }
+  };
+  storedReviews();
 
   return (
     <>
