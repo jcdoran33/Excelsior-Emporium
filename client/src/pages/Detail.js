@@ -155,16 +155,9 @@ function Detail() {
             >Submit Review
             </button>
           </form>
-
+          {/* comments displayed in container below */}
           <div className="review-container center-column">
-            <div className="review">
-              <h4>Review 1 Title</h4>
-              <p>Review 1 Test Content - Review 1 Test Content - Review 1 Test Content - </p>
-            </div>
-            <div className="review">
-              <h4>Review 2 Title</h4>
-              <p>Review 2 Test Content - Review 2 Test Content - Review 2 Test Content - </p>
-            </div>
+
           </div>
           </div>
 
