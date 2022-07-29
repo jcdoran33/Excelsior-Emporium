@@ -90,7 +90,7 @@ function Detail() {
     const textData = textField.value;
     const length = reviewList.childElementCount;
 
-    // localStorage.setItem(`review${length+1}`, `${textData}`);
+    localStorage.setItem(`review-${currentProduct.name}-${length+1}`, `${textData}`); //saves new review in localStorage
 
     reviewList.innerHTML +=
      ` 
@@ -104,6 +104,14 @@ function Detail() {
     textField.value = '';
 
   }
+ // cannot get below code working (supposed to fetch all the items in storage)
+  // let storedReviews = async function () {
+  //   const reviewList = document.querySelector(".review-container");
+  //   let i = 0;
+  //   for (i = 0; i < reviewList.childElementCount; i++){
+  //     await localstorage.getItem(`review-${currentProduct.name}-${i}`);
+  //   }
+  // };
 
   return (
     <>
@@ -118,7 +126,7 @@ function Detail() {
               alt={currentProduct.name}
               className='product-image-detail'
             />
-
+          </div>
 
 
           <h2>{currentProduct.name}</h2>
@@ -136,11 +144,11 @@ function Detail() {
             </button>
           </p>
 
-          <img
+          {/* <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
             className='product-image-detail'
-          />
+          /> */}
           <br/>
           <h3>Reviews</h3> <br/>
           <form>
