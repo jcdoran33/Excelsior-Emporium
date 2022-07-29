@@ -31,7 +31,9 @@ Want to buy your favorite Marvel superhero's most valuable items? This e-commerc
 
 ## Contributions
 Kishan Shah - Click [here](https://github.com/kishanshah98) for link to Kishan's github
+
 Alyssa Lopez - Click [here](https://github.com/AlyLopez02) for link to Alyssa's github
+
 Jack Doran - Click [here](https://github.com/jcdoran33) for link to Jack's github
 
 ## Tests
@@ -43,4 +45,4 @@ To run the reducers test, perform `npm run test`.
 Apache
 
 ## Questions
-If you have any questions, please contact us via email at [alylopez0217@gmail.com](mailto:alylopez0217@gmail.com), [jcdoran33@gmail.com](mailto:jcdoran33@gmail.com, [kishan725@gmail.com](mailto:kishan725@gmail.com) or through github at [kishanshah98](https://github.com/kishanshah98), [jcdoran33](https://github.com/jcdoran33), and [AlyLopez02](https://github.com/AlyLopez02)
+If you have any questions, please contact us via email at [alylopez0217@gmail.com](mailto:alylopez0217@gmail.com), [jcdoran33@gmail.com](mailto:jcdoran33@gmail.com), [kishan725@gmail.com](mailto:kishan725@gmail.com) or through github at [kishanshah98](https://github.com/kishanshah98), [jcdoran33](https://github.com/jcdoran33), and [AlyLopez02](https://github.com/AlyLopez02)
