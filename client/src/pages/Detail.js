@@ -119,14 +119,14 @@ function Detail() {
         <div className="container my-1">
           <Link to="/">← Back to Products</Link>
 
-
           <div className='center-column'>
+
             <img
               src={`/images/${currentProduct.image}`}
               alt={currentProduct.name}
               className='product-image-detail'
             />
-          </div>
+
 
 
           <h2>{currentProduct.name}</h2>
@@ -144,14 +144,9 @@ function Detail() {
             </button>
           </p>
 
-          {/* <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-            className='product-image-detail'
-          /> */}
           <br/>
           <h3>Reviews</h3> <br/>
-          <form>
+          <form className='center-column'>
             <textarea required={true} cols="40" rows="5" id="review-area" placeholder='Add your review here'></textarea>
             <br/>
             <button 
@@ -161,7 +156,7 @@ function Detail() {
             </button>
           </form>
 
-          <div className="review-container">
+          <div className="review-container center-column">
             <div className="review">
               <h4>Review 1 Title</h4>
               <p>Review 1 Test Content - Review 1 Test Content - Review 1 Test Content - </p>
@@ -170,6 +165,7 @@ function Detail() {
               <h4>Review 2 Title</h4>
               <p>Review 2 Test Content - Review 2 Test Content - Review 2 Test Content - </p>
             </div>
+          </div>
           </div>
 
         </div>

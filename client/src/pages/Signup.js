@@ -36,15 +36,13 @@ function Signup(props) {
       <Link to="/login">← Go to Login</Link>
       <div className='center-column'>
         <h2>Signup!</h2>
-        <p>
+        <p className='text-align'>
           Want to be as flashy as Iron Man? Or as protected as Captain America? Then, sign up today and start shopping!
         </p>
 
         <br />
 
         <img src={signUpCapt} className='capt' />
-
-        <br />
 
 
         <form onSubmit={handleFormSubmit}>
