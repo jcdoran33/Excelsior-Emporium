@@ -7,7 +7,7 @@ function Header() {
     return (
         <header className="background-img center">
 
-                <h1 className='back text'>
+                <h1 className='back-text'>
                     <a href='/'>
                         Excelsior Emporium
                     </a>

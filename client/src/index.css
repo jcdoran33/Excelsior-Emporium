@@ -207,25 +207,35 @@ input:focus {
   }
 }
 
-/* header classes */
-.background-img {
-  background-image: url('../src/images/header-background.png');
-  min-height: 152px;
-}
 
+/* custom classes used in multiple files */
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.back {
+.center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+/* header classes */
+.background-img {
+  background-image: url('../src/images/header-background.png');
+  min-height: 152px;
+  background-repeat: repeat;
+}
+
+.back-text{
   background-color: rgba(0, 0, 0, 0.8);
-
-}
-
-.text {
   font-size: 85px;
+  text-align: center;
 }
 
 header {
@@ -255,21 +265,23 @@ nav {
   max-height: 350px;
 }
 
-
-/* details page */
-.center-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* sign up & login images*/
+/* sign up & login*/
 .capt {
   max-height: 500px;
   max-width: auto;
 }
 
+.text-align {
+  text-align: center;
+}
+
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* cat menu */
 .circle {
   height: 100px;
   width: 100px;  
@@ -289,6 +301,8 @@ nav {
   padding:50px;
   border-bottom: black solid 2px;
 }
+
+/* review styles */
 /* styling for review blocks */
 .review {
   border: 2px solid lightgrey;
@@ -303,4 +317,68 @@ nav {
 #review-area {
   max-width: 500px;
   min-width: 200px;
+}
+
+/* Responsiveness */
+/* cards */
+@media screen and (max-width: 977px) and (min-width: 769px){
+  .card {
+    width: 50%;
+  }
+}
+
+/* forms */
+@media screen and (max-width: 965px) and (min-width: 617px){
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 616px) and (min-width: 436px) {
+  form {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+/* header */
+@media screen and (max-width: 822px) and (min-width: 584px) {
+  .back-text{
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 583px) and (min-width: 437px) {
+  .back-text{
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 436px) and (min-width: 341px) {
+  .back-text{
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 340px){
+  .back-text{
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 25px;
+  }
 }
