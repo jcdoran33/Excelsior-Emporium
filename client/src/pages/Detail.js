@@ -104,6 +104,14 @@ function Detail() {
     textField.value = '';
 
   }
+ // cannot get below code working (supposed to fetch all the items in storage)
+  // let storedReviews = async function () {
+  //   const reviewList = document.querySelector(".review-container");
+  //   let i = 0;
+  //   for (i = 0; i < reviewList.childElementCount; i++){
+  //     await localstorage.getItem(`review-${currentProduct.name}-${i}`);
+  //   }
+  // };
 
   return (
     <>
