@@ -382,3 +382,12 @@ nav {
     font-size: 25px;
   }
 }
+
+/* reviews */
+.show {
+  display: inline
+}
+
+.no-show {
+  display: none;
+}

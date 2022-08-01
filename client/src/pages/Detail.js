@@ -15,6 +15,9 @@ import { QUERY_PRODUCTS } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 import spinner from '../assets/spinner.gif';
 
+
+
+
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
@@ -82,62 +85,51 @@ function Detail() {
     idbPromise('cart', 'delete', { ...currentProduct });
   };
 
+
   const postNewReview = (event) => {
     event.preventDefault();
 
     const textField = document.querySelector("#review-area");
-    const reviewList = document.querySelector(".review-container");
     const textData = textField.value;
-    const length = reviewList.childElementCount;
 
-    localStorage.setItem(`review-${currentProduct.name}-${length+1}`, `${textData}`); //saves new review in localStorage
 
-    reviewList.innerHTML +=
-     ` 
-      <div class="review">
-          <h4>${currentProduct.name} Review #${length+1}</h4>
-          <p>${textData}</p>
-      </div>
-      `
-    ;
+    localStorage.setItem(`review-${currentProduct.name}-${(localStorage.length) + 1}`, `${textData}`); //saves new review in localStorage
 
     textField.value = '';
 
   }
- // cannot get below code working (supposed to fetch all the items in storage)
-  const storedReviews = async function () {
-    const reviewList = document.querySelector(".review-container");
-    // const reviewLength = await reviewList.childElementCount ? reviewList.childElementCount : 2;
-    console.log(`reviewList initial value: `, reviewList);
-    reviewList.innerHTML = '';
+  // cannot get below code working (supposed to fetch all the items in storage)
 
-    let i;
-    for (i = 0; i < localStorage.length; i++){
-      const oldReviews =   localStorage.getItem(`review-${currentProduct.name}-${i+1}`);
-      // const oldReviews =  await localStorage.getItem(`review-Mjolnir-${i+1}`);
-      const reviewList =  document.querySelector(".review-container");
-      const reviewLength =  reviewList.childElementCount 
-      // ? reviewList.childElementCount : 5;
-      console.log(`i value: `, i);
-      console.log(`localStorage.length value: `, localStorage.length);
-      console.log(`currentProduct: `, currentProduct.name)
-      console.log(`oldReviews value: `, oldReviews);
-      console.log(`reviewList: `,reviewList); //returning null instead of a value
-      reviewList.innerHTML += 
-      ` 
-      <div class="review">
-          <h4>${currentProduct.name} Review #${reviewLength+1}</h4>
-          <p>${oldReviews}</p>
-      </div>
-      `
+  const reviewList = document.querySelector(".review-container");
+
+  let storedReviews = (event) => {
+    event.preventDefault();
+
+    let i = 0;
+    for (i = 0; i < localStorage.length; i++) {
+      const reviewText = localStorage.getItem(`review-${currentProduct.name}-${i + 1}`);
+
+      console.log(reviewText)
+
+      reviewList.innerHTML +=
+        ` 
+       <div class="review">
+           <h4>${currentProduct.name} Review #${i + 1}</h4>
+           <p>${reviewText}</p>
+       </div>
+       `
+        ;
+
+      const showBtn = document.getElementById('show-reviews');
+
+      if (reviewList.length == 0) {
+        showBtn.classList.add('show');
+      } else {
+        showBtn.classList.add('no-show');
+      }
     }
   };
-  // storedReviews();
-  useEffect( () => {
-   const callFunc = async () =>  storedReviews();
-   callFunc()
-  }, []); // Only run once
-  
+
 
   return (
     <>
@@ -155,36 +147,41 @@ function Detail() {
 
 
 
-          <h2>{currentProduct.name}</h2>
+            <h2>{currentProduct.name}</h2>
 
-          <p>{currentProduct.description}</p>
+            <p>{currentProduct.description}</p>
 
-          <p>
-            <strong>Price:</strong>${currentProduct.price}{' '}
-            <button onClick={addToCart}>Add to Cart</button>
+            <p>
+              <strong>Price:</strong>${currentProduct.price}{' '}
+              <button onClick={addToCart}>Add to Cart</button>
+              <button
+                disabled={!cart.find((p) => p._id === currentProduct._id)}
+                onClick={removeFromCart}
+              >
+                Remove from Cart
+              </button>
+            </p>
+
+            <br />
+            <h3>Reviews</h3> <br />
+            <form className='center-column'>
+              <textarea required={true} cols="40" rows="5" id="review-area" placeholder='Add your review here'></textarea>
+              <br />
+              <button
+                onClick={postNewReview}
+                id="review-submit"
+              >Submit Review
+              </button>
+            </form>
+            {/* comments displayed in container below */}
+            <br />
             <button
-              disabled={!cart.find((p) => p._id === currentProduct._id)}
-              onClick={removeFromCart}
-            >
-              Remove from Cart
-            </button>
-          </p>
+              onClick={storedReviews}
+              id='show-reviews'
+            >Show Reviews</button>
+            <div className="review-container center-column">
 
-          <br/>
-          <h3>Reviews</h3> <br/>
-          <form className='center-column'>
-            <textarea required={true} cols="40" rows="5" id="review-area" placeholder='Add your review here'></textarea>
-            <br/>
-            <button 
-            onClick={postNewReview} 
-            id="review-submit"
-            >Submit Review
-            </button>
-          </form>
-          {/* comments displayed in container below */}
-          <div className="review-container center-column">
-
-          </div>
+            </div>
           </div>
 
         </div>

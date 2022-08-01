@@ -4,7 +4,7 @@
 
 Want to buy your favorite Marvel superhero's most valuable items? This e-commerce store is the perfect site for you. This application allows one to buy products based on their favorite Marvel characters including Thor, Iron Man, Captain America, Spiderman, Black Panther, and even the biggest villain Thanos. The user is able to create their own login information which will allow them to shop around the Excelsior Emporium site to add products to their cart and checkout. 
 
-![Screenshot]()
+![Screenshot](./client/src/images/site-screenshot.png)
 
 ## Table of Contents
 * [Installation](#installation)
@@ -20,11 +20,13 @@ Want to buy your favorite Marvel superhero's most valuable items? This e-commerc
 3. Run `npm run develop` to launch application on local host
 
 ## Usage
-- Javascript
+- Node.js
 - React JS
 - GraphQL
-- MongoDB
-- Mongoose
+- MongoDB/Mongoose
+- Apollo Server Express
+- JSON Web Token & Bcrypt for user authentication
+- Stripe API for payment/checkout
 
 ### Deployed link provided below:
 [Excelsior Emporium](https://excelsior-emporium-jcd.herokuapp.com/)
