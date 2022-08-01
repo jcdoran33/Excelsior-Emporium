@@ -25,8 +25,7 @@ db.once('open', async () => {
       image: 'mjolnir.jpg',
       category: categories[0]._id,
       price: 20000.00,
-      quantity: 10,
-      reviews: []
+      quantity: 10
     },
     {
       name: "Lightning Bolt",
