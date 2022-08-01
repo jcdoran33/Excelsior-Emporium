@@ -105,13 +105,24 @@ function Detail() {
 
   }
  // cannot get below code working (supposed to fetch all the items in storage)
-  let storedReviews = async function () {
+  const storedReviews = async function () {
     const reviewList = document.querySelector(".review-container");
-    const reviewLength = reviewList.childElementCount;
-    let i = 0;
-    for (i = 0; i < 3; i++){
-      const oldReviews = await localStorage.getItem(`review-${currentProduct.name}-${i}`);
-      console.log(oldReviews);
+    // const reviewLength = await reviewList.childElementCount ? reviewList.childElementCount : 2;
+    console.log(`reviewList initial value: `, reviewList);
+    reviewList.innerHTML = '';
+
+    let i;
+    for (i = 0; i < localStorage.length; i++){
+      const oldReviews =   localStorage.getItem(`review-${currentProduct.name}-${i+1}`);
+      // const oldReviews =  await localStorage.getItem(`review-Mjolnir-${i+1}`);
+      const reviewList =  document.querySelector(".review-container");
+      const reviewLength =  reviewList.childElementCount 
+      // ? reviewList.childElementCount : 5;
+      console.log(`i value: `, i);
+      console.log(`localStorage.length value: `, localStorage.length);
+      console.log(`currentProduct: `, currentProduct.name)
+      console.log(`oldReviews value: `, oldReviews);
+      console.log(`reviewList: `,reviewList); //returning null instead of a value
       reviewList.innerHTML += 
       ` 
       <div class="review">
@@ -121,7 +132,12 @@ function Detail() {
       `
     }
   };
-  storedReviews();
+  // storedReviews();
+  useEffect( () => {
+   const callFunc = async () =>  storedReviews();
+   callFunc()
+  }, []); // Only run once
+  
 
   return (
     <>
